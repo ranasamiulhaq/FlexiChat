@@ -88,6 +88,15 @@ app.get('/health', (req, res) => {
 app.use("/api/chat", chatRoute);
 app.use("/api/auth", authRoute);
 
+app.get('/api/health', (req, res) => {
+  // A standard health check returns a 200 OK status
+  // and a simple JSON object confirming the service is up.
+  res.status(200).json({
+    status: 'ok',
+    message: 'Backend service is running and healthy! 🚀',
+    timestamp: new Date().toISOString()
+  });
+});
 // Global error handler
 app.use((err, req, res, next) => {
     logger.error('Unhandled error:', err);
