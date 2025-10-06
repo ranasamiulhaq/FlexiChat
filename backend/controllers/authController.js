@@ -8,7 +8,7 @@ const sendAuthResponse = (res, token, user, message, statusCode) => {
     res.cookie("token", token, {
         httpOnly: true,
         secure: true,
-        sameSite: "Strict",
+        sameSite: "None",
         maxAge: 60 * 60 * 1000
     });
     res.status(statusCode).json({
@@ -87,7 +87,7 @@ export const UserVerification = async (req, res) => {
                     res.cookie("token", newToken, { // Set a new HttpOnly cookie
                         httpOnly: true,
                         secure: true,
-                        sameSite: "Strict",
+                        sameSite: "None",
                         maxAge: 60 * 60 * 1000
                     });
 
