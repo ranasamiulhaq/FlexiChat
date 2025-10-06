@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+    import { useState, useEffect, useRef } from "react";
 import { Send, LogOut, MessageCircle, Users, Search, MoreVertical, Phone, Video } from "lucide-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -527,17 +527,7 @@ const Chat = () => {
                                     </div>
                                 </div>
                                 
-                                <div className="flex items-center space-x-2">
-                                    <button className="p-2 hover:bg-gray-700 rounded-lg transition-all duration-200">
-                                        <Phone size={18} />
-                                    </button>
-                                    <button className="p-2 hover:bg-gray-700 rounded-lg transition-all duration-200">
-                                        <Video size={18} />
-                                    </button>
-                                    <button className="p-2 hover:bg-gray-700 rounded-lg transition-all duration-200">
-                                        <MoreVertical size={18} />
-                                    </button>
-                                </div>
+
                             </div>
                         </div>
 
